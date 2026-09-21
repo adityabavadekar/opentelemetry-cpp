@@ -30,6 +30,10 @@ Increment the:
 * [DOC] Fix and clarify the `StartSpanOptions` documentation
   [#4526](https://github.com/open-telemetry/opentelemetry-cpp/pull/4526)
 
+* [API] `TraceState::Set` now overwrites an entry with the same key, and
+ `TraceState::FromHeader` discards duplicate keys.
+  [#4586](https://github.com/open-telemetry/opentelemetry-cpp/pull/4586)
+
 * [SDK] Add a missing `<cstdint>` include to `predicate_factory.h`, which
   uses `uint8_t` without including the header that declares it. This relied
   on a transitive include from elsewhere in the translation unit and failed
